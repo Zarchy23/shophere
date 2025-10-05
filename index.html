@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NovaShop — Home</title>
+<link rel="stylesheet" href="style.css">
+<!-- EmailJS SDK (optional; uncomment after you get your user/public key) -->
+<!-- <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+<script>emailjs.init('YOUR_USER_ID_OR_PUBLIC_KEY');</script> -->
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner container">
+      <div class="brand"><a href="index.html"><img src="images/logo.png" alt="NovaShop"></a></div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="promotions.html">Promotions</a></li>
+          <li><a href="stores.html">Stores</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a id="open-cart" class="icon-btn" href="javascript:void(0)">Cart <span class="cart-count">0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>NovaShop — Style for every step</h1>
+        <p class="small">Quality footwear & accessories for all ages — delivered nationwide.</p>
+        <div style="margin-top:12px"><a href="products.html" class="btn">Shop Now</a></div>
+        <div class="searchbar"><input id="site-search" placeholder="Search products or categories"><a href="products.html" class="btn-ghost">Browse All</a></div>
+      </div>
+      <div><img src="classic.jpg" alt="hero" style="width:100%;border-radius:12px;box-shadow:var(--shadow)"></div>
+    </section>
+
+    <section><h2>Featured</h2><div id="products-grid" class="products-grid"></div></section>
+
+    <section class="grid-2">
+      <div class="info"><h3>Why NovaShop?</h3><p class="small">Trusted quality, local stores, excellent support.</p></div>
+      <div class="info"><h3>Support</h3><p class="small">Call +263 123 456 789 or email support@novashop.example</p></div>
+    </section>
+  </main>
+
+  <div id="cart-overlay" style="display:none;align-items:flex-end"><div id="cart-drawer"></div></div>
+
+  <footer class="footer"><div class="container">&copy; 2025 NovaShop — All rights reserved.</div></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
