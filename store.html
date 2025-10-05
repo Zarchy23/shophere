@@ -1,0 +1,16 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Stores — NovaShop</title><link rel="stylesheet" href="style.css"></head><body>
+<header class="header"><div class="header-inner container"><div class="brand"><a href="index.html"><img src="images/logo.png" alt="NovaShop"></a></div><nav><ul><li><a href="index.html">Home</a></li><li><a href="products.html">Products</a></li><li><a href="stores.html" class="active">Stores</a></li><li><a href="contact.html">Contact</a></li><li><a id="open-cart" class="icon-btn" href="javascript:void(0)">Cart <span class="cart-count">0</span></a></li></ul></nav></div></header>
+
+<main class="container">
+  <div style="display:flex;justify-content:space-between;align-items:center"><h1>Store Locator</h1><button class="back-btn" onclick="history.back()">Back</button></div>
+  <div style="margin-top:12px;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px">
+    <div class="card" style="padding:14px"><strong>Harare - Downtown</strong><div class="small">+263 242 123456</div><div class="small">Mon-Sat 8AM-6PM</div></div>
+    <div class="card" style="padding:14px"><strong>Bulawayo - Main Mall</strong><div class="small">+263 292 654321</div><div class="small">Mon-Sat 8AM-5PM</div></div>
+    <div class="card" style="padding:14px"><strong>Gweru - Samora</strong><div class="small">+263 54 234567</div><div class="small">Mon-Sat 8AM-5PM</div></div>
+  </div>
+</main>
+
+<div id="cart-overlay" style="display:none;align-items:flex-end"><div id="cart-drawer"></div></div>
+<footer class="footer"><div class="container">&copy; 2025 NovaShop</div></footer>
+<script src="script.js"></script>
+</body></html>
