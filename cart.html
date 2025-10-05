@@ -1,0 +1,14 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cart — NovaShop</title><link rel="stylesheet" href="style.css"></head><body>
+  <header class="header"><div class="header-inner container"><div class="brand"><a href="index.html"><img src="images/logo.png" alt="NovaShop"></a></div><nav><ul><li><a href="index.html">Home</a></li><li><a href="products.html">Products</a></li><li><a href="cart.html" class="active">Cart</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a id="open-cart" class="icon-btn" href="javascript:void(0)">Cart <span class="cart-count">0</span></a></li></ul></nav></div></header>
+
+  <main class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center"><h1>Your Cart</h1><button class="back-btn" onclick="history.back()">Back</button></div>
+    <div id="cart-list" style="margin-top:12px"></div>
+    <div id="cart-actions" style="margin-top:18px"></div>
+  </main>
+
+  <div id="cart-overlay" style="display:none;align-items:flex-end"><div id="cart-drawer"></div></div>
+
+  <footer class="footer"><div class="container">&copy; 2025 NovaShop</div></footer>
+<script src="script.js"></script>
+</body></html>
