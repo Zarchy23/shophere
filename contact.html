@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contact — NovaShop</title><link rel="stylesheet" href="style.css"></head><body>
+<header class="header"><div class="header-inner container"><div class="brand"><a href="index.html"><img src="images/logo.png" alt="NovaShop"></a></div><nav><ul><li><a href="index.html">Home</a></li><li><a href="products.html">Products</a></li><li><a href="about.html">About</a></li><li><a href="stores.html">Stores</a></li><li><a href="contact.html" class="active">Contact</a></li><li><a id="open-cart" class="icon-btn" href="javascript:void(0)">Cart <span class="cart-count">0</span></a></li></ul></nav></div></header>
+
+<main class="container">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <h1>Contact Us</h1>
+    <button class="back-btn" onclick="history.back()">Back</button>
+  </div>
+
+  <div class="grid-2" style="margin-top:12px">
+    <div class="info">
+      <!-- Include EmailJS SDK and initialize with your PUBLIC_KEY -->
+      <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+      <script>/* Uncomment and replace with your public key to initialize:
+        (function(){ emailjs.init('YOUR_USER_ID_OR_PUBLIC_KEY'); })();
+      */</script>
+
+      <form id="contact-form">
+        <input name="name" placeholder="Your name" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #eee;margin-top:8px">
+        <input name="email" placeholder="Email" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #eee;margin-top:8px">
+        <textarea name="message" placeholder="Message" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #eee;margin-top:8px"></textarea>
+        <button class="btn" style="margin-top:8px">Send</button>
+      </form>
+    </div>
+
+    <aside class="info">
+      <h4>Visit us</h4>
+      <p class="small">123 Main Street<br>+263 123 456 789<br>support@novashop.example</p>
+    </aside>
+  </div>
+</main>
+
+<div id="cart-overlay" style="display:none;align-items:flex-end"><div id="cart-drawer"></div></div>
+<footer class="footer"><div class="container">&copy; 2025 NovaShop</div></footer>
+
+<script src="script.js"></script>
+<script>
+/* contact form is wired in script.js to use EmailJS placeholders.
+   To enable EmailJS:
+   1. Sign up at emailjs.com and create a service & template
+   2. Replace the EMAILJS_* constants in script.js with your values
+   3. Uncomment the emailjs.init line above and put your PUBLIC_KEY
+*/
+</script>
+</body></html>
