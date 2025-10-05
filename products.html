@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Products — NovaShop</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <header class="header">
+    <div class="header-inner container">
+      <div class="brand"><a href="index.html"><img src="images/logo.png" alt="NovaShop"></a></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="promotions.html">Promotions</a></li>
+          <li><a href="stores.html">Stores</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a id="open-cart" class="icon-btn" href="javascript:void(0)">Cart <span class="cart-count">0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <h1>Products</h1>
+      <button class="back-btn" onclick="history.back()">Back</button>
+    </div>
+
+    <div style="margin-top:12px;display:flex;gap:12px;align-items:center">
+      <input id="site-search" placeholder="Search products or categories" style="flex:1;padding:12px;border-radius:10px;border:1px solid #e6e9ef">
+      <select id="cat-filter" style="padding:12px;border-radius:10px;border:1px solid #e6e9ef"><option value="">All categories</option><option value="men">Men</option><option value="women">Women</option><option value="kids">Kids</option></select>
+    </div>
+
+    <div id="products-grid" class="products-grid"></div>
+  </main>
+
+  <div id="cart-overlay" style="display:none;align-items:flex-end"><div id="cart-drawer"></div></div>
+
+  <footer class="footer"><div class="container">&copy; 2025 NovaShop</div></footer>
+
+<script src="script.js"></script>
+<script>
+document.getElementById('cat-filter').addEventListener('change', function(e){
+  const v = e.target.value;
+  if(!v) renderProductsGrid('products-grid', PRODUCTS);
+  else renderProductsGrid('products-grid', PRODUCTS.filter(p=>p.category===v));
+});
+</script>
+</body>
+</html>
