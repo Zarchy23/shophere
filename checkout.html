@@ -1,0 +1,30 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Checkout — NovaShop</title><link rel="stylesheet" href="style.css"></head><body>
+  <header class="header"><div class="header-inner container"><div class="brand"><a href="index.html"><img src="images/logo.png" alt="NovaShop"></a></div><nav><ul><li><a href="index.html">Home</a></li><li><a href="products.html">Products</a></li><li><a href="checkout.html" class="active">Checkout</a></li><li><a href="cart.html">Cart</a></li><li><a href="contact.html">Contact</a></li><li><a id="open-cart" class="icon-btn" href="javascript:void(0)">Cart <span class="cart-count">0</span></a></li></ul></nav></div></header>
+
+  <main class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center"><h1>Checkout</h1><button class="back-btn" onclick="history.back()">Back</button></div>
+    <div class="grid-2" style="margin-top:12px">
+      <div class="info">
+        <h3>Delivery details</h3>
+        <form id="checkout-form">
+          <input name="name" placeholder="Full name" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #eee;margin-top:8px">
+          <input name="email" placeholder="Email" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #eee;margin-top:8px">
+          <input name="address" placeholder="Address" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #eee;margin-top:8px">
+          <select name="payment" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #eee;margin-top:8px">
+            <option value="">Choose payment</option><option value="ecocash">EcoCash</option><option value="card">Card on Delivery</option>
+          </select>
+          <button class="btn" style="margin-top:12px">Place order</button>
+        </form>
+      </div>
+      <div class="info">
+        <h3>Order summary</h3>
+        <div id="checkout-summary" class="small" style="margin-top:8px"></div>
+      </div>
+    </div>
+  </main>
+
+  <div id="cart-overlay" style="display:none;align-items:flex-end"><div id="cart-drawer"></div></div>
+
+  <footer class="footer"><div class="container">&copy; 2025 NovaShop</div></footer>
+<script src="script.js"></script>
+</body></html>
